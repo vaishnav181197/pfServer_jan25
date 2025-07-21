@@ -1,0 +1,89 @@
+Express.js - Node.js ->Server:
+-------------------------------
+
+1.create a folder
+2.open cmd in the folder path
+3.initialize node.js app/generate package.json [npm init -y]
+4.generate node_modules[npm i]->Install express.js [npm i express]
+5.create index.js file
+  
+  
+   ->import express
+   ->create server app
+   ->server called listen
+   ->request handler implemented
+
+->Environmental variables and process:-
+----------------------------------------
+-Environment variables are dynamic values that can affect the 
+behavior of a running process. In Node. js, you can access 
+environment variables using the process. env object. 
+These variables are set outside your application and read 
+by your application during runtime.
+
+->process :The process object is a global that
+ provides information about, and control over, the current
+ Node. js process. As a global, it is always available to 
+Node. js applications without using require() .
+
+->dotenv :Dotenv is a zero-dependency module that loads
+ environment variables from a .env file into process.env
+
+ npm i dotenv
+
+=>Middleware :-
+===================
+a special function that can act on requests even before it
+hits the server
+
+->Predefined
+->UserDefined
+
+const middleWareName=(req,res,next)=>{
+   next()
+}
+
+->2types based on implimentation of middleware
+   1.Application level middlewares
+   2.Router specific middlewares
+
+
+=>CORS(Cross Origin Resource Sharing) mechanism:-
+----------------------
+-HTTP based mechanism for verifying and allowing requests
+from a different origin
+
+-use cors package - npm i cors
+
+=>Nodemon :
+nodemon is a tool that helps develop Node.js based applications by automatically 
+restarting the node application when file changes in the directory are detected.
+
+npm i -g nodemon
+
+=>Mongoose:-
+----------------
+Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. 
+Mongoose supports Node.js and Deno (alpha).
+
+npm i mongoose
+
+=>JWT(JsonWebToken):-
+----------------------
+
+-Authentication technique used in apis for securely transfering sensitive data like user information without spilling it
+-Using JWT a server generates a random character based token for individual authenticated users, which can be used as the further 
+ Authentication credential in authorized api requests
+-need to install jsonwebtoken package to impliment jwt with express.js+node.js based rest api servers
+   npm i jsonwebtoken
+
+   sign() - used to create token-> sign(payload/data,secretKey)
+   verify() - used for verifying a token -> verify(token,secretKey)
+
+
+=>Multer:-
+--------------
+-Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files. 
+It is written on top of busboy for maximum efficiency.
+
+-npm i multer
